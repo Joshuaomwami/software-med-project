@@ -81,22 +81,27 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  
 }
 
 .hero {
-  background-color: #f2f2f2;
+  background-color: #ce8282;
   padding: 100px 0;
   text-align: center;
+  background-image: url(med-images/med2.jpg);
+  background-size: cover;
+  background-position: center;
+  
 }
 
 .hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 50px;
+  margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -106,7 +111,7 @@ body {
   color:blue;
   text-decoration: none;
   border-radius: 30px;
-  border: 3px solid #fff;
+  border: 1px solid #1b0c0c;
 }
 
 .btn:hover {
@@ -119,6 +124,7 @@ body {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  margin-top: 30%;
 }
 .footer_container{
 

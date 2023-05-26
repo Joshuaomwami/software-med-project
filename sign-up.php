@@ -62,33 +62,25 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["username"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    // Check if user already exists in the database
-    $checkSql = "SELECT * FROM users WHERE email='$email'";
-    $checkResult = $conn->query($checkSql);
-
-    if ($checkResult->num_rows > 0) {
-        // User already exists, display message and option to login
-        echo "<p>User with this email already exists. Please <a href='login.php'>login</a> to your account.</p>";
+    // Insert user details into the database
+    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+    if ($conn->query($sql) === TRUE) {
+        // Successful sign-up
+        echo "<script>alert('Sign up successful. Please log in.'); window.location.href = 'login.php';</script>";
+        exit();
     } else {
-        // Insert user details into the database
-        $insertSql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
-        if ($conn->query($insertSql) === TRUE) {
-            // User registered successfully, redirect to login page
-            header("Location: log-in.php");
-            exit();
-        } else {
-            echo "Error: " . $insertSql . "<br>" . $conn->error;
-        }
+        // Error occurred while inserting data
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 
 $conn->close();
 ?>
+
 </body>
 </html>

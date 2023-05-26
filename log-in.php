@@ -5,12 +5,7 @@
   <title>Website Login</title>
   <link rel="stylesheet" href="log-in.css">
 </head>
-<?php
 
-
-
-
-?>
 
 <body>
   <nav class="navbar">
@@ -61,18 +56,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
-        // User found, redirect to the menu page
+        // User found, redirect to the index page
         header("Location: index.html");
         exit();
     } else {
-        // User not found, display message and option to register
-       // echo "<p>Invalid email or password. Please <a href='register.php'>register</a> to create an account.</p>";
+        // User not found, display error message
+        echo "<p>Invalid email or password. Please try again.</p>";
     }
 }
 
 $conn->close();
 ?>
-
 </body>
 
 </html>

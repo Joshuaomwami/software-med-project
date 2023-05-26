@@ -41,7 +41,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "fitness tracker";
+$database = "medmaster_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);

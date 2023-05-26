@@ -15,7 +15,7 @@
     </ul>
   </nav>
     <h1>Sign Up</h1>
-    <form id="sign-up-form" method="POST" action="process-signup.php">
+    <form id="sign-up-form" method="POST" action="log-in.php">
         <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>

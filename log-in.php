@@ -32,7 +32,7 @@
       <input type="password" id="password" required>
       <button type="submit">Login</button>
     
-    <p>Don't have an account? <a href="sign-up.html">Sign up here</a></p>
+    <p>Don't have an account? <a href="sign-up.php">Sign up here</a></p>
     <p>Forgot your password? <a href="password-reset.html">Reset it here</a></p>
    </form>
   </div>

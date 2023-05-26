@@ -15,7 +15,7 @@
     </ul>
   </nav>
     <h1>Sign Up</h1>
-    <form id="sign-up-form" method="POST" action="log-in.php">
+    <form id="sign-up-form" method="POST" action="process-signup.php">
         <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
@@ -32,16 +32,16 @@
             <label for="confirm-password">Confirm Password:</label>
             <input type="password" id="confirm-password" name="confirm-password" required>
         </div>
-        <?php
-        if (isset($_POST['submit'])) {
-            $password = $_POST['password'];
-            $confirmPassword = $_POST['confirm-password'];
-            if ($password !== $confirmPassword) {
-                echo "<p class='error'>Passwords do not match.</p>";
-            }
-        }
-        ?>
         <button type="submit" name="submit">Sign Up</button>
+        <?php
+          if (isset($_POST['submit'])) {
+              $password = $_POST['password'];
+              $confirmPassword = $_POST['confirm-password'];
+              if ($password !== $confirmPassword) {
+                  echo "<p class='error'>Passwords do not match.</p>";
+              }
+         }
+         ?>
    
     
     <p>Already have an account? <a href="log-in.php">Login here</a></p>

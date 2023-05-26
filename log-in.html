@@ -5,6 +5,12 @@
   <title>Website Login</title>
   <link rel="stylesheet" href="log-in.css">
 </head>
+<?php
+
+
+
+
+?>
 
 <body>
   <nav class="navbar">
@@ -30,6 +36,43 @@
     <p>Forgot your password? <a href="password-reset.html">Reset it here</a></p>
    </form>
   </div>
+  <?php
+// Database connection details
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "fitness tracker";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    // Retrieve user details from the database
+    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows == 1) {
+        // User found, redirect to the menu page
+        header("Location: menu.php");
+        exit();
+    } else {
+        // User not found, display message and option to register
+       // echo "<p>Invalid email or password. Please <a href='register.php'>register</a> to create an account.</p>";
+    }
+}
+
+$conn->close();
+?>
+
 </body>
 
 </html>

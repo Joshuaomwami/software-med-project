@@ -44,8 +44,51 @@
         <button type="submit" name="submit">Sign Up</button>
    
     
-    <p>Already have an account? <a href="log-in.html">Login here</a></p>
+    <p>Already have an account? <a href="log-in.php">Login here</a></p>
     <p>Forgot your password? <a href="password-reset.html">Reset it here</a></p>
   </form>
+  <?php
+// Database connection details
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "medmaster_db";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    // Check if user already exists in the database
+    $checkSql = "SELECT * FROM users WHERE email='$email'";
+    $checkResult = $conn->query($checkSql);
+
+    if ($checkResult->num_rows > 0) {
+        // User already exists, display message and option to login
+        echo "<p>User with this email already exists. Please <a href='login.php'>login</a> to your account.</p>";
+    } else {
+        // Insert user details into the database
+        $insertSql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
+        if ($conn->query($insertSql) === TRUE) {
+            // User registered successfully, redirect to login page
+            header("Location: log-in.php");
+            exit();
+        } else {
+            echo "Error: " . $insertSql . "<br>" . $conn->error;
+        }
+    }
+}
+
+$conn->close();
+?>
 </body>
 </html>

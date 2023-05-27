@@ -18,18 +18,28 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Insert user details into the database
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
-    if ($conn->query($sql) === TRUE) {
-        // Successful sign-up
-        echo "<div class='success'>Sign up successful. Redirecting to log-in page...</div>";
-        echo "<script>setTimeout(function() { window.location.href = 'log-in.php'; }, 3000);</script>";
-        exit();
+    // Check if the user already exists in the database
+    $checkQuery = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
+    $checkResult = $conn->query($checkQuery);
+
+    if ($checkResult->num_rows > 0) {
+        // User with the same username or email already exists
+        echo "<p class='error'>User with the same username or email already exists. Please try a different username or email.</p>";
     } else {
-        // Error occurred while inserting data
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // Insert user details into the database
+        $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+        if ($conn->query($sql) === TRUE) {
+            // Successful sign-
+            echo "<div class='success'>Sign up successful. Redirecting to log-in page...</div>";
+            echo "<script>setTimeout(function() { window.location.href = 'log-in.php'; }, 3000);</script>";
+            exit();
+        } else {
+            // Error occurred while inserting data
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     }
 }
 
 $conn->close();
 ?>
+

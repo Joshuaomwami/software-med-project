@@ -26,14 +26,14 @@ if (isset($_POST['submit'])) {
         // User with the same username or email already exists
        // Error occurred while inserting data
         echo "<p class='error'>User with the same username or email already exists. Redirecting to sign-up page...</p>";
-        echo "<script>setTimeout(function() { window.location.href = 'sign-up.php'; }, 3000);</script>";
+        echo "<script>setTimeout(function() { window.location.href = 'sign-up.php'; }, 2500);</script>";
     } else {
         // Insert user details into the database
         $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
         if ($conn->query($sql) === TRUE) {
             // Successful sign-
             echo "<div class='success'>Sign up successful. Redirecting to log-in page...</div>";
-            echo "<script>setTimeout(function() { window.location.href = 'log-in.php'; }, 3000);</script>";
+            echo "<script>setTimeout(function() { window.location.href = 'log-in.php'; }, 2500);</script>";
             exit();
         } else {
             // Error occurred while inserting data

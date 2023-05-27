@@ -17,11 +17,12 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $medicationName = $_POST["medication_name"];
     $dosage = $_POST["dosage"];
+    $frequency = $_POST["frequency"];
     $startDate = $_POST["start_date"];
     $endDate = $_POST["end_date"];
 
     // Insert the medication data into the database
-    $sql = "INSERT INTO medication_table (medication_name, dosage, start_date, end_date) VALUES ('$medicationName', '$dosage', '$startDate', '$endDate')";
+    $sql = "INSERT INTO medication (medication_name, dosage, start_date, end_date) VALUES ('$medicationName', '$dosage', '$startDate', '$endDate')";
 
     if ($conn->query($sql) === TRUE) {
         // Medication data inserted successfully, redirect to the medication list page

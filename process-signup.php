@@ -24,7 +24,9 @@ if (isset($_POST['submit'])) {
 
     if ($checkResult->num_rows > 0) {
         // User with the same username or email already exists
-        echo "<p class='error'>User with the same username or email already exists. Please try a different username or email.</p>";
+       // Error occurred while inserting data
+        echo "<p class='error'>User with the same username or email already exists. Redirecting to sign-up page...</p>";
+        echo "<script>setTimeout(function() { window.location.href = 'sign-up.php'; }, 3000);</script>";
     } else {
         // Insert user details into the database
         $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";

@@ -17,7 +17,7 @@
   </nav>
   <div class="container">
     <h1>MedMaster Reminder</h1>
-    <form id="form">
+    <form id="form" method="POST" action="process-medication.php">
       <div class="form-group">
         <label for="medication-name">Medication Name</label>
         <input type="text" id="medication-name" required>
@@ -42,8 +42,8 @@
         <label for="end-date">End Date</label>
         <input type="date" id="end-date" required>
       </div>
-      
-      <button type="button" id="add-medication">Add Medication</button>
+    
+      <button type="submit" id="add-medication">Add Medication</button>
 
     </form>
 

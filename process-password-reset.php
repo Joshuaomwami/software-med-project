@@ -21,14 +21,8 @@ if (isset($_POST['submit'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
-        // Email exists, initiate password reset process
-        // Here, you can implement the logic to send a password reset email to the user
-        // You can generate a unique reset token and save it in the database along with the user's email
-        // Send an email to the user with a link containing the reset token
-        // The link can point to a password reset page where the user can enter a new password
-
-        // For demonstration purposes, let's assume the password reset email has been sent successfully
-        echo "<script>alert('Password reset email has been sent to your email address. Please check your inbox.'); window.location.href = 'login.php';</script>";
+        // Email exists, redirect to the password reset page
+        header("Location: new-password.php?email=" . urlencode($email));
         exit();
     } else {
         // Email does not exist in the database

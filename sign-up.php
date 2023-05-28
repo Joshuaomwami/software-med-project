@@ -5,9 +5,6 @@
     <link rel="stylesheet" href="sign-up.css">
 </head>
 <body>
-<video autoplay loop class="back-video" muted plays-inline>
-    <source src="videos/254.mp4" type="video/mp4">
-  </video>
   <nav class="navbar">
     <ul>
       <li>

@@ -28,6 +28,10 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
         </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
         <button type="submit" name="submit">Sign Up</button>
         
         <?php
@@ -40,7 +44,6 @@
          }
          ?>   
     <p>Already have an account? <a href="log-in.php">Login here</a></p>
-    <p>Forgot your password? <a href="password-reset.html">Reset it here</a></p>
   </form>
   <?php
 // Database connection details

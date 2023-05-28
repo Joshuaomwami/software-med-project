@@ -19,6 +19,13 @@
   </nav>
   <div class="container">
   <h1>Login</h1>
+  <?php
+// Check if there is an error query parameter
+if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
+    echo "<p class='error'>Invalid email or password. Please try again.</p>";
+}
+?>
+
   <form id="login-form" method="POST" action="process-login.php">
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>

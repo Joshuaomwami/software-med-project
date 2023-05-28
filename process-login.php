@@ -26,9 +26,8 @@ if (isset($_POST['submit'])) {
         header("Location: welcome.php");
         exit();
     } else {
-        // User not found or invalid credentials, display an error message and redirect back to login
-        echo "Invalid email or password. Please try again.";
-        header("Location: log-in.php");
+        // User not found or invalid credentials, redirect back to login with error notification
+        header("Location: login.php?error=invalid");
         exit();
     }
 }

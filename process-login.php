@@ -23,11 +23,13 @@ if (isset($_POST['submit'])) {
 
     if ($result->num_rows == 1) {
         // User found, redirect to the desired page
-        header("Location: index.html");
+        header("Location: welcome.php");
         exit();
     } else {
-        // User not found or invalid credentials, display an error message
+        // User not found or invalid credentials, display an error message and redirect back to login
         echo "Invalid email or password. Please try again.";
+        header("Location: log-in.php");
+        exit();
     }
 }
 

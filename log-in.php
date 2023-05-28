@@ -34,7 +34,7 @@ if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
     <button type="submit" name="submit">Login</button>
   </form>
   <p>Don't have an account? <a href="sign-up.php">Sign up here</a></p>
-  <p>Forgot your password? <a href="password-reset.html">Reset it here</a></p>
+  <p>Forgot your password? <a href="password-reset.php">Reset it here</a></p>
 </div>
 <?php
 // Database connection details

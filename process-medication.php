@@ -23,26 +23,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insert the medication data into the database
     $sql = "INSERT INTO medication (user_id, medication_name, dosage, frequency, start_date, end_date) VALUES (?, ?, ?, ?, ?, ?)";
-    
+
     // Prepare the statement
     $stmt = $conn->prepare($sql);
-    
+
     // Bind the parameters
     $stmt->bind_param("isssss", $userId, $medicationName, $dosage, $frequency, $startDate, $endDate);
-    
+
     // Get the user ID from session or wherever you have stored it
     $userId = 1; // Replace with the actual user ID
-    
+
     // Execute the statement
     if ($stmt->execute()) {
         // Medication data inserted successfully, redirect to the medication list page
-        header("Location: medication-list.html");
+        header("Location: medication-list.php");
         exit();
     } else {
         // Error occurred while inserting data, display an error message
         echo "Error: " . $stmt->error;
     }
-    
+
     // Close the statement
     $stmt->close();
 }

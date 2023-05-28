@@ -19,7 +19,7 @@
   </nav>
   <div class="container">
   <h1>Login</h1>
-  <form id="login-form" method="POST" action="index.html">
+  <form id="login-form" method="POST" action="process-login.php">
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
     <label for="password">Password:</label>

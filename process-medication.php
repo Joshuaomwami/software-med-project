@@ -15,24 +15,38 @@ if ($conn->connect_error) {
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $medicationName = $_POST["medication_name"];
+    $medicationName = $_POST["medication-name"];
     $dosage = $_POST["dosage"];
     $frequency = $_POST["frequency"];
-    $startDate = $_POST["start_date"];
-    $endDate = $_POST["end_date"];
+    $startDate = $_POST["start-date"];
+    $endDate = $_POST["end-date"];
 
     // Insert the medication data into the database
-    $sql = "INSERT INTO medication (medication_name, dosage, start_date, end_date) VALUES ('$medicationName', '$dosage', '$startDate', '$endDate')";
-
-    if ($conn->query($sql) === TRUE) {
+    $sql = "INSERT INTO medication (user_id, medication_name, dosage, frequency, start_date, end_date) VALUES (?, ?, ?, ?, ?, ?)";
+    
+    // Prepare the statement
+    $stmt = $conn->prepare($sql);
+    
+    // Bind the parameters
+    $stmt->bind_param("isssss", $userId, $medicationName, $dosage, $frequency, $startDate, $endDate);
+    
+    // Get the user ID from session or wherever you have stored it
+    $userId = 1; // Replace with the actual user ID
+    
+    // Execute the statement
+    if ($stmt->execute()) {
         // Medication data inserted successfully, redirect to the medication list page
         header("Location: medication-list.html");
         exit();
     } else {
         // Error occurred while inserting data, display an error message
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+    
+    // Close the statement
+    $stmt->close();
 }
 
+// Close the connection
 $conn->close();
 ?>

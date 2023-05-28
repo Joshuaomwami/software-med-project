@@ -33,6 +33,7 @@
             <input type="password" id="confirm-password" name="confirm-password" required>
         </div>
         <button type="submit" name="submit">Sign Up</button>
+        
         <?php
           if (isset($_POST['submit'])) {
               $password = $_POST['password'];
@@ -41,9 +42,7 @@
                   echo "<p class='error'>Passwords do not match.</p>";
               }
          }
-         ?>
-   
-    
+         ?>   
     <p>Already have an account? <a href="log-in.php">Login here</a></p>
     <p>Forgot your password? <a href="password-reset.html">Reset it here</a></p>
   </form>

@@ -17,7 +17,7 @@
       </div>
       <button type="submit" name="submit">Reset Password</button>
     </form>
-    <p>Remembered your password? <a href="login.php">Login here</a></p>
+    <p>Remembered your password? <a href="log-in.php">Login here</a></p>
   </div>
 </body>
 

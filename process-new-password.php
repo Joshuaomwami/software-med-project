@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
         $sql = "UPDATE users SET password='$newPassword' WHERE email='$email'";
         $conn->query($sql);
 
-        echo "<script>alert('Password has been successfully reset.'); window.location.href = 'login.php';</script>";
+        echo "<script>alert('Password has been successfully reset.'); window.location.href = 'log-in.php';</script>";
         exit();
     } else {
         echo "<script>alert('Passwords do not match. Please try again.'); window.location.href = 'enter-new-password.php?email=" . urlencode($email) . "';</script>";

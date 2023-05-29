@@ -1,3 +1,13 @@
+body {
+  font-family: 'poppins', sans-serif;
+  background-image:url(med-images/med20.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 .navbar {
   background-color: #864242;
   padding: 10px;

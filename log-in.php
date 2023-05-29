@@ -11,7 +11,7 @@
   <nav class="navbar">
     <ul>
       <li>
-        <img src="med-images/medl.jpg" alt="Logo">
+        <img src="med-images/logo.jpg" alt="Logo">
       </li>
       <li><a href="home.html">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>

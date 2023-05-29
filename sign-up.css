@@ -3,9 +3,11 @@
 body {
   font-family: 'poppins', sans-serif;
   background-image:url(med-images/254.jpg);
+  background-size: cover;
+  background-position: center;
   margin: 0;
   padding: 0;
-}
+} 
 .navbar {
   background-color: #864242;
   padding: 10px;

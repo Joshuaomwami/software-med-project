@@ -3,6 +3,21 @@
 <head>
     <title>Sign Up</title>
     <link rel="stylesheet" href="sign-up.css">
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            var error = document.getElementById("error-message");
+
+            if (password !== confirmPassword) {
+                error.innerHTML = "Passwords do not match.";
+                return false;
+            } else {
+                error.innerHTML = "";
+                return true;
+            }
+        }
+    </script>
 </head>
 <body>
   <nav class="navbar">
@@ -34,15 +49,6 @@
         </div>
         <button type="submit" name="submit">Sign Up</button>
         
-        <?php
-          if (isset($_POST['submit'])) {
-              $password = $_POST['password'];
-              $confirmPassword = $_POST['confirm-password'];
-              if ($password !== $confirmPassword) {
-                  echo "<p class='error'>Passwords do not match.</p>";
-              }
-         }
-         ?>   
     <p>Already have an account? <a href="log-in.php">Login here</a></p>
   </form>
   <?php

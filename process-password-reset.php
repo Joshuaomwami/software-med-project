@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
 
-    // Check if the email exists in the database
+    // Check if the email exists in the database 
     $sql = "SELECT * FROM users WHERE email='$email'";
     $result = $conn->query($sql);
 

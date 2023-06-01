@@ -32,9 +32,10 @@ if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
     <button type="submit" name="submit">Login</button>
-  </form>
+ 
   <p>Don't have an account? <a href="sign-up.php">Sign up here</a></p>
   <p>Forgot your password? <a href="password-reset.php">Reset it here</a></p>
+  </form>
 </div>
 <?php
 // Database connection details

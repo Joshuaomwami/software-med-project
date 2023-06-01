@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
     $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
     if ($conn->query($sql) === TRUE) {
         // Successful sign-up
-        echo "<script>alert('Sign up successful. Please log in.'); window.location.href = 'login.php';</script>";
+        echo "<script>alert('Sign up successful. Please log in.'); window.location.href = 'log-in.php';</script>";
         exit();
     } else {
         // Error occurred while inserting data

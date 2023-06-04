@@ -63,7 +63,7 @@
           // User found, set the user ID in the session variable
           session_start();
           $row = $result->fetch_assoc();
-          $_SESSION['user_id'] = $row['user_id'];
+          $_SESSION['users_id'] = $row['users_id'];
 
           // Redirect to the add-medication.php page
           header("Location: add-medication.php");

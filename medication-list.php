@@ -45,6 +45,9 @@
   <h1>Medication List</h1>
 
   <?php
+
+    session_start();
+
     // Database connection details
     $servername = "localhost";
     $username = "root";
@@ -59,7 +62,11 @@
       die("Connection failed: " . mysqli_connect_error());
     }
 
+    // Retrieve the user ID from the session variable
+    $userID = $_SESSION['user_id'];
+
     // Fetch medication data from the database
+    $sql = "SELECT * FROM medication WHERE user_id = '$userID'";
     $sql = "SELECT * FROM medication";
     $result = mysqli_query($conn, $sql);
 

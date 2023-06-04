@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
 
     if ($result->num_rows == 1) {
         // User found, redirect to the index.html page
-        header("Location: index.php");
+        header("Location: add-medication.php");
         exit();
     } else {
         // User not found or invalid credentials, display an error message

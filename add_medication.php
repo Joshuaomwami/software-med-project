@@ -11,7 +11,7 @@
         <img src="med-images/logo.jpg" alt="Logo">
       </li>
       <li><a href="home.html">Home</a></li>
-      <li><a href="medication-list.html">Medication List</a></li>
+      <li><a href="medication-list.php">Medication List</a></li>
       <li><a href="about-us.html">About Us</a></li>
     </ul>
   </nav>

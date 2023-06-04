@@ -72,7 +72,13 @@
 
     if (mysqli_num_rows($result) > 0) {
       echo "<table>";
-      echo "<tr><th>Medication Name</th><th>Dosage</th><th>Frequency</th><th>Start Date</th><th>End Date</th></tr>";
+      echo "<tr>
+      <th>Medication Name</th>
+      <th>Dosage</th>
+      <th>Frequency</th>
+      <th>Begin Date</th>
+      <th>End Date</th>
+      </tr>";
 
       while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";

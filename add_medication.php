@@ -35,7 +35,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="start-date">Start Date</label>
+        <label for="start-date">Begin Date</label>
         <input type="date" id="start-date" name="start-date" required>
       </div>
       <div class="form-group">

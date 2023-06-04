@@ -3,7 +3,7 @@
 <html>
 <head>
   <title>Medication List</title>
-  <link rel="stylesheet" href="medication-list.css">
+  <link rel="stylesheet" href="#">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -72,7 +72,7 @@
         echo "<td>" . $row['medication_name'] . "</td>";
         echo "<td>" . $row['dosage'] . "</td>";
         echo "<td>" . $row['frequency'] . "</td>";
-        echo "<td>" . $row['start_date'] . "</td>";
+        echo "<td>" . $row['begin_date'] . "</td>";
         echo "<td>" . $row['end_date'] . "</td>";
         echo "</tr>";
       }

@@ -26,7 +26,7 @@ if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
 }
 ?>
 
-  <form id="login-form" method="POST" action="process-login.php">
+  <form id="login-form" method="POST" action="add_medication.php">
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
     <label for="password">Password:</label>
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
 
     if ($result->num_rows == 1) {
         // User found, redirect to the index.html page
-        header("Location: index.php");
+        header("Location: add_medication.php");
         exit();
     } else {
         // User not found or invalid credentials, display an error message

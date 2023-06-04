@@ -25,7 +25,7 @@
   VALUES ('$medicationName', '$dosage', '$frequency', '$startDate', '$endDate')";
   if (mysqli_query($conn, $sql)) {
     echo"Successful medication addition";
-    header("Location: medication-list.html");
+    header("Location: medication-list.php");
     exit();
   } else {
     echo"Error occurred while inserting data";

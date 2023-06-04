@@ -47,6 +47,9 @@ if (isset($_POST['submit'])) {
 
     mysqli_close($conn);
 }
+else {
+  echo "User ID not found in the session. Make sure you have logged in before adding medication.";
+}
 ?>
 
 <!DOCTYPE html>

@@ -3,7 +3,6 @@
 <html>
 <head>
   <title>Medication List</title>
-  <link rel="stylesheet" href="#">
   <style>
     body {
       font-family: Arial, sans-serif;

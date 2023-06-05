@@ -26,7 +26,7 @@ if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
 }
 ?>
 
-  <form id="login-form" method="POST" action="add_medication.php">
+  <form id="login-form" method="POST" action="process-login.php">
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
     <label for="password">Password:</label>

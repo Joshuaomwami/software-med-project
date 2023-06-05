@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
     // User not logged in, redirect to login page
@@ -47,16 +46,14 @@ if (isset($_POST['submit'])) {
 
     mysqli_close($conn);
 }
-else {
-  echo "User ID not found in the session. Make sure you have logged in before adding medication.";
-}
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
   <title>MedMaster Reminder</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="add_medication.css">
 </head>
 <body>
   <nav class="navbar">

@@ -72,7 +72,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
 
     // Insert user details into the database
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+    $sql = "INSERT INTO users (username, email, passwod) VALUES ('$username', '$email', '$password')";
     if ($conn->query($sql) === TRUE) {
         // Successful sign-up
         echo "<script>alert('Sign up successful. Please log in.'); window.location.href = 'log-in.php';</script>";

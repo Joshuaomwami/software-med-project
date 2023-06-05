@@ -13,6 +13,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$errorMsg = '';
+
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -26,12 +28,8 @@ if (isset($_POST['submit'])) {
         header("Location: add_medication.php");
         exit();
     } else {
-        // User not found or invalid credentials, redirect back to login with error notification
-        header("Location: login.php?error=invalid")
-        {
-            echo "<p class='error'>Invalid email or password. Please try again.</p>";
-        }
-        exit();
+        // User not found or invalid credentials
+        $errorMsg = "Invalid email or password. Please try again.";
     }
 }
 

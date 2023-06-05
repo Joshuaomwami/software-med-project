@@ -10,7 +10,7 @@
   <nav class="navbar">
     <ul>
       <li>
-        <img src="med-images/medl.jpg" alt="Logo">
+        <img src="med-images/logo.jpg" alt="Logo">
       </li>
       <li><a href="home.html">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
@@ -30,9 +30,10 @@
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
       <button type="submit" name="submit">Login</button>
-    </form>
+    
     <p>Don't have an account? <a href="sign-up.php">Sign up here</a></p>
     <p>Forgot your password? <a href="password-reset.php">Reset it here</a></p>
+    </form>
   </div>
 
 </body>

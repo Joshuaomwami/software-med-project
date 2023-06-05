@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // Database connection details
 $servername = "localhost";
 $username = "root";
@@ -24,17 +22,15 @@ if (isset($_POST['submit'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
-        // User found, retrieve the user ID and store it in the session
-        $row = $result->fetch_assoc();
-        $userID = $row['user_id'];
-        $_SESSION['user_id'] = $userID;
-
-        // Redirect to the desired page
+        // User found, redirect to the desired page
         header("Location: add_medication.php");
         exit();
     } else {
         // User not found or invalid credentials, redirect back to login with error notification
-        header("Location: log-in.php?error=invalid");
+        header("Location: login.php?error=invalid")
+        {
+            echo "<p class='error'>Invalid email or password. Please try again.</p>";
+        }
         exit();
     }
 }

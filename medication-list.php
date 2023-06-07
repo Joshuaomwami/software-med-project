@@ -9,6 +9,48 @@
       background-color: #f5f5f5;
       padding: 20px;
     }
+    .navbar {
+  background-color: #864242;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar li {
+  margin-right: 10px;
+}
+
+.navbar li:first-child {
+  margin-right: auto;
+}
+
+.navbar li a {
+  color: #c7c3c3;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.navbar li a:hover {
+  background-color: #ddd;
+  border-radius: 4px;
+  color: black;
+}
+
+.navbar img {
+  width: 120px;
+  height: 40px;
+  margin-right: 10px;
+  object-fit: contain;
+}
 
     h1 {
       text-align: center;
@@ -41,6 +83,16 @@
   </style>
 </head>
 <body>
+<nav class="navbar">
+   <ul>
+     <li>
+       <img src="med-images/logo.jpg" alt="Logo">
+     </li>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="add_medication.php">Add Medicatiion</a></li>
+     <li><a href="about-us.html">About Us</a></li>
+   </ul>
+ </nav>
   <h1>Medication List</h1>
 
   <?php

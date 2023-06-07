@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <title>Welcome to MedMaster</title>
+    <style>
+        body{
+            background-image: url(med-images/med2.jpg);
+            background-image: fixed;
+            background-size: cover;
+            background-position: center;           
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+        .navbar {
+            background-color: #864242;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+           }
+           .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+           }
+           .navbar li {
+            margin-right: 10px;
+           }
+           .navbar li:first-child {
+            margin-right: auto;
+           }
+           .navbar li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+           }
+           .navbar li a:hover {
+            background-color: #241f1f;
+            border-radius: 15px;
+           }
+          .navbar img {
+            width: 130px;
+            height: 40px;
+            margin-right: 9px;
+            object-fit: contain;
+          }
+          .container{
+            align-items: center;
+            position: absolute;
+            text-align: center;
+            margin-top: 60px;
+            margin-left: 250px;
+            padding: 10px;
+
+          }
+          h1{
+            font-size: 80px;
+            font-weight: 500;
+            color: rgb(11, 19, 19);
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+          }
+          p{
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+
+          }
+          .container .btn{
+            display: inline-block;
+            padding:10px 20px;
+            color:#fff;
+            text-decoration: none;
+            border-radius: 30px;
+            background: linear-gradient(180deg,#0649d8,rgb(90, 190, 90));
+            text-align: center;
+            font-size: 18px;
+            margin-top: 50px;
+          }
+          .container .btn:hover{
+            background-color: transparent;
+            color: #864242;
+          }
+          footer{
+            background-color: #864242;
+            margin-top: 48%;
+            padding: 20px 0;
+            text-align: center;
+          }
+          .footer p{
+            font-size: 18px;
+            color: aliceblue;
+          }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+          <li>
+            <img src="med-images/logo.jpg" alt="Logo">
+          </li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <h1>Welcome to the MedMaster</h1>
+        <p>Never miss a dose again! Our website helps you stay on track with your medications.</p>
+
+        <a href="sign-up.php" class="btn">Sign Up here</a>
+      </div>
+<footer class="footer">
+    <p>&copy; 2023 MedMaster Reminder. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

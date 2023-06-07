@@ -12,7 +12,7 @@
       <li>
         <img src="med-images/logo.jpg" alt="Logo">
       </li>
-      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
     </ul>
   </nav>

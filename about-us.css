@@ -67,6 +67,7 @@
       background-image: url('med-images/med6.jpg');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       height: 400px; 
       display: flex;
       align-items: center;

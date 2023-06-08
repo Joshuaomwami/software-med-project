@@ -5,6 +5,7 @@ body {
   background-image:url(med-images/med20.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
 } 

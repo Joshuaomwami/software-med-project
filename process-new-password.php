@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 
     if ($newPassword == $confirmPassword) {
         // Update the password in the database
-        $sql = "UPDATE users SET password='$newPassword' WHERE email='$email'";
+        $sql = "UPDATE users SET passwod='$newPassword' WHERE email='$email'";
         $conn->query($sql);
 
         echo "<script>alert('Password has been successfully reset.'); window.location.href = 'log-in.php';</script>";

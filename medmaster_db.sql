@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2023 at 09:16 AM
+-- Generation Time: Jun 09, 2023 at 09:22 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -57,20 +57,6 @@ CREATE TABLE `medication` (
 
 INSERT INTO `medication` (`user_id`, `medication_name`, `dosage`, `frequency`, `begin_date`, `end_date`) VALUES
 (2, 'panadol', '2capsules', 'twice', '2023-06-06', '2023-06-09');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `reminder_table`
---
-
-CREATE TABLE `reminder_table` (
-  `user_id` int(11) NOT NULL,
-  `medication_id` date NOT NULL,
-  `reminder_date` date NOT NULL,
-  `reminder_time` time NOT NULL,
-  `reminder_message` mediumtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 

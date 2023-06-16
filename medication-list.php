@@ -34,15 +34,15 @@
 }
 
 .navbar li a {
-  color: #c7c3c3;
+  color: #fff;
   text-decoration: none;
   padding: 5px;
 }
 
 .navbar li a:hover {
-  background-color: #ddd;
+  background-color:black;
   border-radius: 4px;
-  color: black;
+  color:#fff;
 }
 
 .navbar img {
